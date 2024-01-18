@@ -1,10 +1,10 @@
 # 🚀🎬 ShortGPT
+
+## (NEWS: The successor of ShortGPT, ShortX is out, an automation factory with way more capabilities than ShortGPT, check it out at [shortx.ai](https://shortx.ai?ref=sgpt))
+https://github.com/RayVentura/ShortGPT/assets/121462835/e9d9c87a-8a8c-45a0-a5fa-0baff0e067a6
 <p align="center">
   <a href="https://discord.gg/uERx39ru3R">
     <img src="https://dcbadge.vercel.app/api/server/uERx39ru3R?compact=true&style=flat">
-  </a>
-  <a href="https://twitter.com/RayVenturaHQ">
-    <img src="https://img.shields.io/twitter/url/https/twitter.com/rayventurahq.svg?style=social&label=Follow%20%40RayVentura">
   </a>
   <a href="https://star-history.com/#rayventura/shortgpt)">
     <img src="https://img.shields.io/github/stars/rayventura/shortgpt?style=social">
@@ -31,8 +31,8 @@
 </div>
 </br>
 
-If you're only interested in using ShortGPT programatically (pip library), go on [the documentation website](https://docs.shortgpt.ai/docs/how-to-install).
-Otherwise, follow the installation steps below for running the web app locally. 
+Follow the installation steps below for running the web app locally (running the google Colab is highly recommanded). 
+Please read "installation-notes.md" for more details.
 ## 🎥 Showcase ([Full video on YouTube](https://youtu.be/hpoSHq-ER8U))
 
 https://github.com/RayVentura/ShortGPT/assets/121462835/a802faad-0fd7-4fcb-aa82-6365c27ea5fe
@@ -70,46 +70,23 @@ If you prefer not to install the prerequisites on your local system, you can use
 
 2. Once you're in the notebook, simply run the cells in order from top to bottom. You can do this by clicking on each cell and pressing the 'Play' button, or by using the keyboard . Enjoy using ShortGPT!
 
-# Instructions for running shortGPT
-This guide provides step-by-step instructions for installing ImageMagick and FFmpeg on your system, which are both required to do automated editing. Once installed, you can proceed to run `runShortGPT.py` successfully.
-
-
+# Instructions for running shortGPT locally
+This guide provides step-by-step instructions for installing shortGPT and its dependencies.
+To run ShortGPT locally, you need Docker.
 
 ## Installation Steps
-Follow the instructions below to install ImageMagick, FFmpeg, and clone the shortGPT repository:
 
-### Step 1 and 2, install Ffmpeg and ImageMagick
-For the updated installation steps, please follow Step 1 and 2 in our official documentation [docs.shortgpt.ai/docs/how-to-install](https://docs.shortgpt.ai/docs/how-to-install).
-### Step 3: Clone the shortGPT Repository
+To run ShortGPT, you need to have docker. Follow the instructions "installation-notes.md" for more details.
 
-1. Open a terminal or command prompt.
-2. Execute the following command to clone the shortGPT repository:
-   ```
-   git clone https://github.com/rayventura/shortgpt.git
-   ```
-
-### Step 4: Install Python Dependencies
-
-1. Open a terminal or command prompt.
-2. Navigate to the directory where `runShortGPT.py` is located (the cloned repo).
-3. Execute the following command to install the required Python dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-   This command will install the necessary packages specified in the `requirements.txt` file.
-
+1. For running the Dockerfile, do this:
+```bash
+docker build -t short_gpt_docker:latest .
+docker run -p 31415:31415 --env-file .env short_gpt_docker:latest
+```
 ## Running runShortGPT.py Web Interface
 
-Once you have successfully installed ImageMagick, FFmpeg, and the Python dependencies, you can run `runShortGPT.py` by following these steps:
-
-1. Open a terminal or command prompt.
-2. Navigate to the directory where `runShortGPT.py` is located (the cloned repo).
-3. Execute the following command to run the script:
-   ```
-   python runShortGPT.py
-   ```
-4. After running the script, a Gradio interface should open at your local host on port 31415 (http://localhost:31415). 
+2. After running the script, a Gradio interface should open at your local host on port 31415 (http://localhost:31415)
+ 
 
 ## Framework overview
 
@@ -149,14 +126,6 @@ These technologies work together to provide a seamless and efficient experience 
 ## 💁 Contributing
 
 As an open-source project in a rapidly developing field, we are extremely open to contributions, whether it would be in the form of a new feature, improved infrastructure, or better documentation.
-
-## 🔗 Get in touch on Twitter 🐦
-
-Keep up with the latest happenings, announcements, and insights about Short-GPT by checking out our Twitter accounts. Spark a conversation with our developer and the AI's own account for fascinating dialogues, latest news about the project, and more.
-
-- **Developer**: Stay updated [@RayVentura](https://twitter.com/RayVenturaHQ). Deep-dive into behind-the-scenes, project news, and related topics from the person behind ShortGPT.
-
-We're eager to interact with you and listen to your feedback, concepts, and experiences with Short-GPT. Come on board on Twitter and let's navigate the future of AI as a team! 💡🤖
 <p align="center">
   <a href="https://star-history.com/#RayVentura/ShortGPT&Date">
     <img src="https://api.star-history.com/svg?repos=RayVentura/ShortGPT&type=Date" alt="Star History Chart">
